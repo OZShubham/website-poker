@@ -1,76 +1,26 @@
-function validateForm() {
-	let name = document.getElementById("name").value;
-	let email = document.getElementById("email").value;
-	let password = document.getElementById("password").value;
-
-	if (name === "" || email === "" || password === "") {
-		alert("Please fill in all fields.");
-		return false;
-	}
-}
-
-/* Name validation */
-
+// Signup Page JavaScript
 const nameInput = document.getElementById("name");
-
-function validateName() {
-  const name = nameInput.value;
-  const regex = /^[a-zA-Z]+$/; // Regular expression to match alphabetic characters only
-
-  if (!regex.test(name)) {
-    nameInput.setCustomValidity("Please enter a valid name with alphabetic characters only");
-  } else {
-    nameInput.setCustomValidity("");
-  }
-}
-
-nameInput.addEventListener("change", validateName);
-
-
-/* Password matching validation. */
-
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
-
-function validatePassword() {
-  if (password.value != confirmPassword.value) {
-    confirmPassword.setCustomValidity("Passwords don't match");
-  } else {
-    confirmPassword.setCustomValidity("");
-  }
-}
-
-password.addEventListener("change", validatePassword);
-confirmPassword.addEventListener("keyup", validatePassword);
-
-/* Email validation. */
-
 const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
+const signupButton = document.getElementById("login-btn");
 
-function validateEmail() {
-  const email = emailInput.value;
-  if (!email.includes("@") || !email.includes(".")) {
-    emailInput.setCustomValidity("Please enter a valid email address");
-  } else {
-    emailInput.setCustomValidity("");
-  }
-}
-
-emailInput.addEventListener("change", validateEmail);
-
-/* Disable button logic  */
-
-const signUpButton = document.getElementById("login-btn");
-
+// Function to enable/disable signup button
 function validateForm() {
-  if (nameInput.value && emailInput.value && password.value && confirmPassword.value) {
-    signUpButton.removeAttribute("disabled");
-  } else {
-    signUpButton.setAttribute("disabled", "disabled");
-  }
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (name && email && password && confirmPassword && password === confirmPassword) {
+        signupButton.removeAttribute("disabled");
+    } else {
+        signupButton.setAttribute("disabled", "disabled");
+    }
 }
 
+// Event listeners for form validation
 nameInput.addEventListener("input", validateForm);
 emailInput.addEventListener("input", validateForm);
-password.addEventListener("input", validateForm);
-confirmPassword.addEventListener("input", validateForm);
+passwordInput.addEventListener("input", validateForm);
+confirmPasswordInput.addEventListener("input", validateForm);

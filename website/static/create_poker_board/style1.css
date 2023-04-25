@@ -1,111 +1,110 @@
-body{
+/* Reset some default styles for form elements */
+form, input, select {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    padding-bottom: 40px;
-    background-image: url(dark.jpg);
 }
-.box{
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 5px;
+	text-align: right;
+
+
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Style the form box */
+.box {
     width: 300px;
-    padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgba(35, 169, 179, 0.4);
-    text-align: center;
-
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
-.box h1{
-    color: white;
+
+body {
+	font-family: Arial, sans-serif;
+	background-image: url(background.jpg);
+	margin: 0;
+	padding: 0;
+	
+}
+
+/* Style the form header */
+.box h4 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the logo */
+.logo {
+    max-width: 60px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Style the form inputs */
+.box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* Style the form select */
+.box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Style the form submit button */
+.box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
     text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 10%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
-.box input[type="text"],.box input[type="text"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #0367fd;
-    padding: 14px 10px;
-    width: 220px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
-}
-.box input[type="text"]:focus,.box input[type="text"]:focus{
-    width: 270px;
-    border-color: #ffc400ec;
-}
-.box input[type="submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #ffc400ec;
-    padding: 14px 10px;
-    width: 220px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
-    cursor: pointer;  
 
+/* Style the form submit button on hover */
+.box input[type="submit"]:hover {
+    background-color: #0056b3;
 }
-.box input[type="submit"]:hover{
-    background: #ffc400ec;
-}
-.dark-header-grid{
-    background-color: #005681;
-    color: white;
-    position: relative;
-    z-index: 1;
-}
-h2{
-    display: flex;
-    justify-content: center;
-}
-.title-row{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.logo{
-    width: 50px;
-    margin-right: 1.5rem;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-label{
-    border: 0;
-    font-size: 20px;
-    
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #be950eec;
-    padding: 14px 10px;
-    width: 220px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
-    cursor: pointer;  
-
-}
-@media  screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .box {
-      width: 100%;
-    }
-    .dark-header-grid{
-        width: 100%;
-    }
-  }
